@@ -1,0 +1,128 @@
+{
+  "name": "lagatos-browser",
+  "version": "2.0.0-0",
+  "description": "A minimal web browser for the distributed web",
+  "main": "app/main.js",
+  "scripts": {
+    "test": "npm run lint",
+    "start": "electron .",
+    "debug": "cross-env MODE=debug electron .",
+    "build": "electron-builder build --publish never",
+    "build-all": "electron-builder build -mwl",
+    "lint": "standard --fix",
+    "preversion": "npm run test",
+    "changelog:generate": "auto-changelog --template json --output changelog-data.json",
+    "version:new": "node scripts/version.js"
+  },
+  "build": {
+    "npmRebuild": false,
+    "asar": true,
+    "productName": "Lagatos Browser",
+    "appId": "lagatos.browser.app",
+    "files": [
+      "build/**/*",
+      "app/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "protocols": [
+      {
+        "name": "hypercore-protocol",
+        "schemes": [
+          "hyper",
+          "dat"
+        ]
+      },
+      {
+        "name": "webpages",
+        "schemes": [
+          "http",
+          "https"
+        ]
+      }
+    ],
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "AppImage"
+      ],
+      "category": "Development"
+    }
+  },
+  "keywords": [
+    "dat",
+    "hypercore",
+    "hyper",
+    "hyperdrive",
+    "ipfs",
+    "browser",
+    "dweb"
+  ],
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "electron": "^9.1.0",
+    "electron-builder": "^21",
+    "electron-rebuild": "^1.11.0",
+    "standard": "^14.3.4"
+  },
+  "dependencies": {
+    "@cliqz/adblocker-electron": "^1.18.0",
+    "@cliqz/adblocker-webextension": "^1.18.0",
+    "@geut/hyperdrive-promise": "^3.0.1",
+    "auto-changelog": "^2.2.0",
+    "await-exec": "^0.1.2",
+    "bootstrap": "^4.5.2",
+    "dat-fetch": "^5.0.0",
+    "dat-sdk": "^2.1.0",
+    "dat-sdk-old": "^1.0.0",
+    "dotenv": "^8.2.0",
+    "edit-package": "^1.0.3",
+    "electron-extensions": "^6.0.4",
+    "electron-reload": "^1.5.0",
+    "enquirer": "^2.3.6",
+    "env": "0.0.2",
+    "fs-extra": "^9.0.1",
+    "ipfs": "^0.46.1",
+    "jsonwebtoken": "^8.5.1",
+    "jwks-rsa": "^1.9.0",
+    "jwt-decode": "^2.2.0",
+    "keytar": "^6.0.1",
+    "mime": "^2.4.6",
+    "mongodb": "^3.6.0",
+    "ms": "^2.1.2",
+    "node-fetch": "^2.6.0",
+    "public-ip": "^4.0.2",
+    "rc": "^1.2.8",
+    "request": "^2.88.2",
+    "scoped-fs": "^1.4.1",
+    "to-json": "^0.5.0-prerelease",
+    "unsplash-js": "^6.0.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

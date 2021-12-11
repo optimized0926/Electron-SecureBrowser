@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<title>Lagatos Browser - Welcome</title>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="lagatos://assets/lib/intro/intro.css">
+<style>
+  :root {
+    --ag-color-purple: #6e2de5;
+    --ag-color-black: #111;
+    --ag-color-white: #F2F2F2;
+    --ag-color-green: #2de56e;
+  }
+
+	body, html {
+		display: flex;
+		flex: 1;
+		margin: 0px;
+		padding: 0px;
+		width: 100%;
+		height: 100%;
+		flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: var(--ag-color-black);
+        color: var(--ag-color-white);
+        font-family: system-ui;
+	}
+
+	h1 {
+	  text-transform: uppercase;
+	}
+    .footer {
+        position: absolute;
+        bottom: 0px;
+        padding: 10px;
+        width: 100%;
+        background: brown;
+    }
+    .signin label{
+        font-size: 18px;
+    }
+    .video-wrapper{
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        width: 50%;
+        height: 50%;
+        transform: translate(-50%,-50%);
+    }
+    .btn-circle {
+        width: 30px;
+        height: 30px;
+        padding: 6px 0px;
+        border-radius: 15px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.42857;
+    }
+    .nav-menu{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+    }
+    .dropdown-menu-left {
+        right: 0px;
+        left: auto;
+    }
+    .alert0 {
+      margin-left: -200px;
+      margin-top: -120px;
+      line-height: 3;
+    }
+    .alert1 {
+      position: absolute;
+      right: 10px;
+      bottom: 20px;
+      width: 250px;
+      line-height: 2;
+    }
+    .alert1 .checkbox input{
+        margin-top: 8px;
+    }
+    .alert1 strong{
+      padding-left: 20px;
+    }
+</style>
+<div class="alert0">
+  <div class="alert alert-success alert-dismissible">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Thank you for joining.</strong> You can now earn money.<br>
+    Your personal invite link
+  </div>
+</div>
+  <div class="alert1">
+    <div class="alert alert-success alert-dismissible">
+      <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      <strong>Complete these steps</strong><br>
+      <div class="checkbox">
+        <label><input type="checkbox" value="">Create your digital wallet</label>
+      </div>
+      <div class="checkbox">
+        <label><input type="checkbox" value="">Create your username</label>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<title>Lagatos Browser</title>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+
+<link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="./assets/electron-tabs.css">
+<style>
+  @import url('style.css'); 
+</style>
+<script src="./electron-browser-view.js"></script>
+<script src="./omni-box.js"></script>
+<script src="./find-menu.js"></script>
+<script src="./footer.js"></script>
+
+<header id="top">
+  <find-menu id="find" class="hidden"></find-menu>
+  <omni-box id="search"></omni-box>
+</header>
+<browser-view tabindex="0" id="view" partition="persist:web-content"></browser-view>
+<nav-footer id="footer"></nav-footer>
+<script src="script.js"></script>
+<script>
+  window.nodeRequire = require;
+  delete window.require;
+  delete window.exports;
+  delete window.module;
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+<script src="./assets/bootstrap/js/bootstrap.bundle.js"></script>

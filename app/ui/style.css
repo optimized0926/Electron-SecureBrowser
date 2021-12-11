@@ -1,0 +1,167 @@
+:root {
+    --ag-color-back: #111;
+    --ag-color-text: #F2F2F2;
+	--ag-color-footer: grey;
+	--ag-color-navback: #e8e8e8;
+	--ag-color-navtext: #111;
+	--ag-color-omniback: #ffffff;
+	--ag-color-border: #ffffff;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+    background: var(--ag-color-back);
+    color: var(--ag-color-text);
+	font-family: system-ui;
+}
+
+#view {
+	flex:1
+}
+
+#top {
+  display: flex;
+  flex-direction: row;
+}
+
+#search {
+  flex: 1;
+}
+
+.hidden {
+	display: none !important;
+}
+
+omni-box {
+  display: block
+}
+
+.omni-box-header {
+	display: flex;
+	flex-direction: row;
+	border: 2px solid var(--ag-color-purple);
+	background: var(--ag-color-omniback);
+	color: var(--ag-color-white);
+	border-bottom: solid 1px;
+}
+
+.omni-box-form, .find-menu-form {
+	display: flex;
+	flex-direction: row;
+	flex:1;
+	border: none;
+    border-radius: 15px;
+	background: var(--ag-color-navback);
+	color: var(--ag-color-navtext);
+    margin: 3px;
+}
+
+.omni-box-input, .find-menu-input {
+	flex: 1;
+	border:none;
+	background: none;
+	padding: 0.5em;
+	color: inherit;
+	font-size: inherit;
+	font-family: inherit;
+}
+
+.omni-box-nav-options {
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
+	padding: 0px;
+	border: 2px solid var(--ag-color-purple);
+	background: var(--ag-color-black);
+	color: var(--ag-color-white);
+}
+
+.omni-box-nav-options [data-selected] {
+	border: 1px solid var(--ag-color-border);
+}
+
+.omni-box-nav-options:empty {
+  display: none;
+}
+
+.omni-box-button, .find-menu-button {
+  color: inherit;
+  font-size: inherit;
+  padding: 0.5em;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.omni-box-nav-item {
+	border: 1px solid var(--ag-color-purple);
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+find-menu {
+	border: 2px solid var(--ag-color-purple);
+	display: flex;
+	flex-direction: row;
+	background: var(--ag-color-black);
+	color: var(--ag-color-white);
+}
+
+
+
+*:focus {
+  outline: 2px solid var(--ag-color-green);
+}
+
+.footer {
+	width: 100%;
+    margin: 0;
+    padding: 10px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background: var(--ag-color-footer);
+}
+.signin label{
+	font-size: 18px;
+}
+
+#survicate-box .sv__survey{
+	bottom: 5px !important;
+}
+
+.extensions {
+	width: 100px;
+	height: 34px;
+}
+.adguard {
+	height: 100%;
+	width: 35px;
+}
+.adguard button{
+	margin-top: 3px;
+    height: 100%;
+    width: 34px;
+    border-radius: 50%;
+    border: 1px solid var(--ag-color-omniback);
+}
+.adguard img{
+	height: 60%;
+}
+.adguard img.inactive {
+	filter: grayscale(1);
+}
+
+.tooltip-inner {
+    max-width: 380px;
+    /* If max-width does not work, try using width instead */
+    width: 380px; 
+}

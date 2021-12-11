@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<title>History</title>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="lagatos://assets/lib/tooltip/tooltip.css">
+<link rel="stylesheet" href="lagatos://assets/css/common.css">
+<link rel="stylesheet" href="lagatos://assets/css/browser-history.css">
+<body>
+    <div id="browser-hint"></div>
+    <div class="circle-nav-menu"></div>
+    <div id="earn-hint"></div>
+    <div class="sidenav">
+        <a href="javascript:;" id="btn-DelCookies">Delete cookies</a>
+        <a href="javascript:;" id="btn-DelHistory">Delete history</a>
+    </div>
+    <!-- Page content -->
+    <div class="main">
+        <div class="row search-header">
+            <form id="searchform">
+            <div class="input-group search-bar">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                <input type="text" class="form-control" id="keyword" placeholder="Search your browsing history">
+            </div>
+            </form>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-sm-2">
+            </div>
+            <div class="col-md-10 col-sm-10 history-page">
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+  window.nodeRequire = require;
+  delete window.require;
+  delete window.exports;
+  delete window.module;
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="lagatos://assets/lib/tooltip/tooltip.js"></script>
+<script type="text/javascript" src="lagatos://assets/lib/custom/nav-menu.js"></script>
+<script type="text/javascript" src="lagatos://assets/lib/pages/browser-history.js"></script>
